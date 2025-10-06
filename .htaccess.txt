@@ -1,0 +1,4 @@
+# Deshabilitar redirección a HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
